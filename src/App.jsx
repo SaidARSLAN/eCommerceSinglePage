@@ -18,7 +18,7 @@ function App() {
 
 
   return (
-    <main className='px-24 py-24'>
+    <main className='px-24 py-12'>
             <ItemList itemList={itemList}/>
     </main>
   )
