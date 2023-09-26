@@ -1,7 +1,8 @@
 import React from 'react'
 import ItemCard from './ItemCard'
 
-const ItemList = ({itemList}) => {
+const ItemList = ({itemList,loading}) => {
+    console.log(loading)
   return (
     <div className='grid lg:grid-cols-3 grid-cols-1 gap-8'>
         {itemList.map((item) => {
