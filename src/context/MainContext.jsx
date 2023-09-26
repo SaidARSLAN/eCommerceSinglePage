@@ -18,12 +18,40 @@ export function Provider ({children}) {
         })
         setItemList(afterDeletedList);
     }
+
+    const sendEditedItem = (EditedID,edittedName,edittedExplanation,edittedCategory,edittedPrice) => {
+        const afterEditedList = itemList.map((item) => {
+                if (item.id === EditedID) { 
+                    return (
+                        {
+                        id : EditedID,
+                        title : edittedName,
+                        description : edittedExplanation,
+                        category : edittedCategory,
+                        price : edittedPrice
+                    }
+                    )
+                    
+                }
+                else {
+                    return ( {
+                        id : item.id,
+                        title : item.title,
+                        description : item.description,
+                        category : item.category,
+                        price : item.price
+                    })
+                }
+        })
+        setItemList(afterEditedList);  
+    }
+
     useEffect(() => {
       sendRequestAPI();
     },[])
 
         return (
-            <GlobalContext.Provider value={{itemList,sendDeletedItem}}>
+            <GlobalContext.Provider value={{itemList,sendDeletedItem,sendEditedItem}}>
                 {children}
             </GlobalContext.Provider>
         )

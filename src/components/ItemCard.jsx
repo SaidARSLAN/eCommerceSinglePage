@@ -1,10 +1,13 @@
 import React, { useContext, useState } from 'react'
 import GlobalContext from '../context/MainContext';
-import AddItem from './AddItem';
 
 const ItemCard = ({item}) => {
     const [editControl, setEditControl] = useState(false);
-    const {sendDeletedItem} = useContext(GlobalContext)
+    const [edittedName,setEdittedName] = useState(item.title);
+    const [edittedExplanation,setEdittedExplanation] = useState(item.description);
+    const [edittedCategory,setEditteCategory] = useState(item.category);
+    const [edittedPrice, setEdittedPrice] = useState(item.price);
+    const {sendDeletedItem,sendEditedItem} = useContext(GlobalContext)
     const handleDelete = () => {
         sendDeletedItem(item.id);
     }
@@ -13,23 +16,24 @@ const ItemCard = ({item}) => {
         setEditControl(true);
     }
 
-    const handleSuccessEdit = () => {
-        console.log("Editted Successfull");
+    const handleSuccessEdit = (event) => {
+        event.preventDefault();
+        sendEditedItem(item.id,edittedName,edittedExplanation,edittedCategory,edittedPrice);
         setEditControl(false);
     }
     return (
     <div>
         {editControl ?  <form className='flex flex-col space-y-4 w-full'>
-            <input className='border-2 px-4 py-2 font-roboto' placeholder='Product Name'></input>
-            <textarea className='border-2 px-4 p-2 font-roboto' rows={5} placeholder='Product Description'></textarea>
-            <select className='border-2 font-roboto px-2 py-2'>
+            <input className='border-2 px-4 py-2 font-roboto' placeholder='Product Name' value={edittedName} onChange={e => setEdittedName(e.target.value)}></input>
+            <textarea className='border-2 px-4 p-2 font-roboto' rows={5} placeholder='Product Description' value={edittedExplanation} onChange={e => setEdittedExplanation(e.target.value)}></textarea>
+            <select className='border-2 font-roboto px-2 py-2' value={edittedCategory} onChange={e => setEditteCategory(e.target.value)}>
                 <option>men's clothing</option>
                 <option>jewelery</option>
                 <option>electronics</option>
                 <option>women's clothing</option>
             </select>
             <div className='w-full  flex justify-between items-center'>
-            <input className='border-2 w-1/3 px-4 py-2' placeholder='$'></input>
+            <input className='border-2 w-1/3 px-4 py-2' placeholder='$' value={edittedPrice} onChange={e => setEdittedPrice(e.target.value)}></input>
             <button className='bg-green-600 text-white px-6 text-lg py-2 font-roboto' onClick={handleSuccessEdit}>Edit</button>
             </div>
         </form>:
