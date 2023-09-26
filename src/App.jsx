@@ -1,13 +1,26 @@
+import axios from 'axios'
 import './App.css'
+import { useEffect, useState } from 'react';
+import ItemList from './components/ItemList';
 
 function App() {
 
+  const [itemList, setItemList] = useState([]);
+
+  const sendRequestAPI = async () => {
+    const request = await axios.get("https://fakestoreapi.com/products");
+    setItemList(request.data);
+  }
+
+  useEffect(() => {
+    sendRequestAPI();
+  },[])
+
+
   return (
-    <>
-       <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
-    </>
+    <main className='px-24 py-24'>
+            <ItemList itemList={itemList}/>
+    </main>
   )
 }
 
