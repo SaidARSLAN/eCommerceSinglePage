@@ -4,25 +4,25 @@ import { useEffect, useRef, useState } from 'react';
 import ItemList from './components/ItemList';
 import AddItem from './components/AddItem';
 import { Provider } from './context/MainContext';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMinus, faPlus, faToggleOff, faToggleOn } from '@fortawesome/free-solid-svg-icons';
 
 function App() {
 
-  
+  const [toggle, setToggle] = useState(true);
 
   const textRef = useRef();
 
   const openCreateMenu = () => {
-
+    setToggle(!toggle);
     const addItem = document.querySelector("#add-item");
-    if (addItem.classList.contains("h-0")) {
+    if (toggle) {
       addItem.classList.add("h-[420px]");
       addItem.classList.remove("h-0");
-      textRef.current.textContent = "-"
     }
     else {
       addItem.classList.add("h-0");
       addItem.classList.remove("h-[420px]");
-      textRef.current.textContent = "+"
     }
     
   }
@@ -31,7 +31,9 @@ function App() {
     <Provider>
     <main className='px-24 py-12'>
       <div className='flex w-full items-center justify-end pb-4' onClick={openCreateMenu}>
-            <h1 className='text-5xl bg-green-900 text-white px-4 py-1 cursor-pointer hover:bg-green-700 duration-200' ref={textRef} id='textRef'>+</h1>
+            <h1 className='text-2xl bg-gray-800 text-white px-4 py-1 cursor-pointer hover:bg-black hover:text-white duration-200'>
+              {toggle ? <FontAwesomeIcon icon={faPlus}></FontAwesomeIcon> : <FontAwesomeIcon icon={faMinus}></FontAwesomeIcon>}
+              </h1>
       </div>
       <AddItem />
       <ItemList/>

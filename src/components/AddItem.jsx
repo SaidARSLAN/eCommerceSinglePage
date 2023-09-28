@@ -1,4 +1,4 @@
-import React, { ChangeEvent,useContext, useState } from 'react'
+import React, { useContext, useState } from 'react'
 import GlobalContext from '../context/MainContext'
 
 const AddItem = () => {
@@ -16,10 +16,8 @@ const AddItem = () => {
         event.preventDefault();
         sendCreatedProduct(title,description,category,price,imgPath);
         const addItem = document.querySelector("#add-item");
-        const textRef= document.querySelector("#textRef");
         addItem.classList.add("h-0");
         addItem.classList.remove("h-[420px]");
-        textRef.textContent = "+";
     }
     const handleFileChange = (event) => {
         const selectedFile = event.target.files[0];
@@ -47,7 +45,7 @@ const AddItem = () => {
             <input type='file' onChange={handleFileChange}/>
             <div className='w-full  flex justify-between items-center'>
             <input className='border-2 w-1/3 px-4 py-2' placeholder='$' value={price} onChange={e => setPrice(e.target.value)}></input>
-            <button className='bg-yellow-400 px-6 text-lg py-2 font-roboto' onClick={handleCreate}>Add</button>
+            <button className='bg-gray-800 hover:bg-black hover:text-white text-white duration-200 px-6 text-lg py-2 font-roboto' onClick={handleCreate}>Add</button>
             </div>
         </form>
     </div>
