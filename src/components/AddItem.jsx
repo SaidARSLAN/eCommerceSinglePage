@@ -32,7 +32,7 @@ const AddItem = () => {
 
   return (
     <div className='w-full h-0 overflow-hidden duration-200' id='add-item'>
-        <form className='flex flex-col space-y-4 w-full'>
+        <form className='flex flex-col space-y-4 w-full lg:w-1/3'>
             <input className='border-2 px-4 py-2 font-roboto' placeholder='Product Name' value={title} onChange={e => setTitle(e.target.value)}></input>
             <textarea className='border-2 px-4 p-2 font-roboto' rows={5} placeholder='Product Description' value={description} onChange={e => setDescription(e.target.value)}></textarea>
             <select className='border-2 font-roboto px-2 py-2' value={category} onChange={e => setCategory(e.target.value)}>
