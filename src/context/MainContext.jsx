@@ -24,6 +24,7 @@ export function Provider ({children}) {
                 if (item.id === EditedID) { 
                     return (
                         {
+                        image : item.image,
                         id : EditedID,
                         title : edittedName,
                         description : edittedExplanation,
@@ -35,6 +36,7 @@ export function Provider ({children}) {
                 }
                 else {
                     return ( {
+                        image : item.image,
                         id : item.id,
                         title : item.title,
                         description : item.description,
@@ -45,13 +47,23 @@ export function Provider ({children}) {
         })
         setItemList(afterEditedList);  
     }
-
+    const sendCreatedProduct = (title,description,category,price,img) => {
+        console.log(img);
+        setItemList([...itemList, {
+            image : img,
+            id : itemList.length,
+            title : title,
+            description : description,
+            category : category,
+            price : price
+        }])
+    }
     useEffect(() => {
       sendRequestAPI();
     },[])
 
         return (
-            <GlobalContext.Provider value={{itemList,sendDeletedItem,sendEditedItem}}>
+            <GlobalContext.Provider value={{itemList,sendDeletedItem,sendEditedItem,sendCreatedProduct}}>
                 {children}
             </GlobalContext.Provider>
         )
