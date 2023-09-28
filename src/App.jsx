@@ -1,6 +1,5 @@
-import axios from 'axios'
 import './App.css'
-import { useEffect, useRef, useState } from 'react';
+import {useRef, useState } from 'react';
 import ItemList from './components/ItemList';
 import AddItem from './components/AddItem';
 import { Provider } from './context/MainContext';
@@ -10,9 +9,6 @@ import { faMinus, faPlus } from '@fortawesome/free-solid-svg-icons';
 function App() {
 
   const [toggle, setToggle] = useState(true);
-
-  const textRef = useRef();
-
   const openCreateMenu = () => {
     setToggle(!toggle);
     const addItem = document.querySelector("#add-item");
