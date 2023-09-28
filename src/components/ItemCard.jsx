@@ -7,6 +7,7 @@ const ItemCard = ({item}) => {
     const [edittedExplanation,setEdittedExplanation] = useState(item.description);
     const [edittedCategory,setEditteCategory] = useState(item.category);
     const [edittedPrice, setEdittedPrice] = useState(item.price);
+    const [edittedImg, setEdittedImg] = useState(item.image);
     const {sendDeletedItem,sendEditedItem} = useContext(GlobalContext)
     const handleDelete = () => {
         sendDeletedItem(item.id);
@@ -18,8 +19,19 @@ const ItemCard = ({item}) => {
 
     const handleSuccessEdit = (event) => {
         event.preventDefault();
-        sendEditedItem(item.id,edittedName,edittedExplanation,edittedCategory,edittedPrice);
+        sendEditedItem(item.id,edittedName,edittedExplanation,edittedCategory,edittedPrice,edittedImg);
         setEditControl(false);
+    }
+
+    const handleFileChange = (event) => {
+        const selectedFile = event.target.files[0];
+        if (selectedFile) {
+            const reader = new FileReader();
+            reader.onload = () => {
+                setEdittedImg(reader.result);
+            };
+            reader.readAsDataURL(selectedFile)
+        }
     }
     return (
     <div>
@@ -32,6 +44,8 @@ const ItemCard = ({item}) => {
                 <option>electronics</option>
                 <option>women's clothing</option>
             </select>
+            <label>Image</label>
+            <input type='file' onChange={handleFileChange}/>
             <div className='w-full  flex justify-between items-center'>
             <input className='border-2 w-1/3 px-4 py-2' placeholder='$' value={edittedPrice} onChange={e => setEdittedPrice(e.target.value)}></input>
             <button className='bg-green-600 text-white px-6 text-lg py-2 font-roboto' onClick={handleSuccessEdit}>Edit</button>

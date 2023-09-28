@@ -19,12 +19,12 @@ export function Provider ({children}) {
         setItemList(afterDeletedList);
     }
 
-    const sendEditedItem = (EditedID,edittedName,edittedExplanation,edittedCategory,edittedPrice) => {
+    const sendEditedItem = (EditedID,edittedName,edittedExplanation,edittedCategory,edittedPrice,edittedImg) => {
         const afterEditedList = itemList.map((item) => {
                 if (item.id === EditedID) { 
                     return (
                         {
-                        image : item.image,
+                        image : edittedImg,
                         id : EditedID,
                         title : edittedName,
                         description : edittedExplanation,
@@ -32,7 +32,6 @@ export function Provider ({children}) {
                         price : edittedPrice
                     }
                     )
-                    
                 }
                 else {
                     return ( {
