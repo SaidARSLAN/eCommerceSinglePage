@@ -1,9 +1,17 @@
+import Nav from "./components/Nav"
+import Hero from "./sections/Hero"
+import './style/style.css'
+
+
 function App() {
 
   return (
-    <div>
-      <h1>Hello, World!</h1>
-    </div>
+    <main>
+      <Nav />
+      <section>
+        <Hero />
+      </section>
+    </main>
   )
 }
 
