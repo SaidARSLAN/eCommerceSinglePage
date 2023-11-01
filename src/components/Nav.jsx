@@ -1,6 +1,10 @@
 import React from 'react'
 import {AiOutlineMenu,AiOutlineShoppingCart} from 'react-icons/ai'
 const Nav = () => {
+
+
+
+
   return (
     <nav className='navbar'>
         <div className='navbar-logo'>
