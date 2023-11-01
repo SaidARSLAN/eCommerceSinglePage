@@ -8,9 +8,7 @@ function App() {
   return (
     <main>
       <Nav />
-      <section>
-        <Hero />
-      </section>
+      <Hero />
     </main>
   )
 }
