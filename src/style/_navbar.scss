@@ -5,13 +5,14 @@
     padding: 0px 2rem;
     align-items: center;
     justify-content: space-between;
+    box-shadow: 0.5px 0.4px 0.1px rgb(179, 179, 179);
     .navbar-logo {
         display: flex;
         align-items: center;
         width: 25%;
         cursor: pointer;
         img {
-            width: 4rem;
+            width: 5rem;
         }
     }
     .navbar-menu {

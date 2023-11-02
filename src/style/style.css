@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 * {
   margin: 0px;
   padding: 0px;
@@ -7,6 +9,7 @@
 html, body, #root {
   width: 100%;
   height: 100%;
+  scroll-behavior: smooth;
 }
 html main, body main, #root main {
   width: 100%;
@@ -20,6 +23,7 @@ html main, body main, #root main {
   padding: 0px 2rem;
   align-items: center;
   justify-content: space-between;
+  box-shadow: 0.5px 0.4px 0.1px rgb(179, 179, 179);
 }
 .navbar .navbar-logo {
   display: flex;
@@ -28,7 +32,7 @@ html main, body main, #root main {
   cursor: pointer;
 }
 .navbar .navbar-logo img {
-  width: 4rem;
+  width: 5rem;
 }
 .navbar .navbar-menu {
   display: flex;
@@ -47,7 +51,7 @@ html main, body main, #root main {
   display: inline-grid;
   grid-template-columns: auto auto;
   grid-template-rows: auto auto;
-  padding: 0px 2rem;
+  padding: 1rem 2rem;
   gap: 12px;
 }
 .hero-page .hero-image {
@@ -70,7 +74,18 @@ html main, body main, #root main {
   bottom: 10px;
   padding: 12px;
   color: white;
-  font-size: 32px;
+  font-size: 24px;
   font-weight: 1000;
   letter-spacing: 1px;
+  font-family: Montserrat;
+}
+
+.best-products {
+  display: flex;
+  flex-direction: column;
+  padding: 0 2rem;
+}
+.best-products h1 {
+  font-size: 24px;
+  font-family: Montserrat;
 }/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+.best-products {
+    display: flex;
+    flex-direction: column;
+    padding: 0 2rem;
+    h1 {
+        font-size: 24px;
+        font-family: Montserrat;
+    }
+}
