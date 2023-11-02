@@ -1,5 +1,6 @@
 import React from 'react'
 import {AiOutlineMenu,AiOutlineShoppingCart} from 'react-icons/ai'
+import { logo } from '../contains'
 const Nav = () => {
 
 
@@ -8,7 +9,7 @@ const Nav = () => {
   return (
     <nav className='navbar'>
         <div className='navbar-logo'>
-            <h1>LOGO</h1>
+            <img src={logo} />
         </div>
         <div className='navbar-menu'>
         <div className='navbar-shopping'>
