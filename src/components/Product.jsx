@@ -6,8 +6,10 @@ const Product = ({product}) => {
         <div className='product-image'>
         <img src={product.image} />
         </div>
+        <div className='product-description'>
         <p>{product.title}</p>
         <p><strong>{product.price} $</strong></p>
+        </div>
     </div>
   )
 }

@@ -19,7 +19,7 @@
             flex-direction: column;
             justify-content: center;
             border: 1px solid rgb(199, 199, 199);
-            padding: 1rem;
+            padding: 0.5rem 1rem;
             cursor: pointer;
             transition: 0.4s ease-in-out;
             &:hover {
@@ -30,17 +30,24 @@
                 align-items: center;
                 justify-content: center;
                 margin-bottom: 1rem;
+                height: 200px;
+                padding: 1rem;
                 img {
-                    width: 75%;
+                    width: 90%;
                     height: 100%;
                     object-fit:contain;
                 }
             }
-            p {
-                font-size: 18px;
-                font-family: Montserrat;
+            .product-description {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                p {
+                    font-size: 15px;
+                    font-family: Montserrat;
+                }
             }
-            
+
         }
         
     }

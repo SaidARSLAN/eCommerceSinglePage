@@ -102,7 +102,7 @@ html main, body main, #root main {
   flex-direction: column;
   justify-content: center;
   border: 1px solid rgb(199, 199, 199);
-  padding: 1rem;
+  padding: 0.5rem 1rem;
   cursor: pointer;
   transition: 0.4s ease-in-out;
 }
@@ -114,14 +114,21 @@ html main, body main, #root main {
   align-items: center;
   justify-content: center;
   margin-bottom: 1rem;
+  height: 200px;
+  padding: 1rem;
 }
 .best-products .product-list .product .product-image img {
-  width: 75%;
+  width: 90%;
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
 }
-.best-products .product-list .product p {
-  font-size: 18px;
+.best-products .product-list .product .product-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.best-products .product-list .product .product-description p {
+  font-size: 15px;
   font-family: Montserrat;
 }/*# sourceMappingURL=style.css.map */
