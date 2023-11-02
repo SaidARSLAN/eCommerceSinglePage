@@ -182,4 +182,40 @@ html main, body main, #root main {
 .send-shop button:hover {
   background-color: white;
   color: black;
+}
+
+.trending-products {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 200px;
+  margin-top: 4rem;
+  padding: 0 2rem;
+}
+.trending-products .trending-header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.trending-products .trending-header h1 {
+  font-size: 24px;
+  font-family: Montserrat;
+}
+.trending-products .trending-header .buttons {
+  display: flex;
+  width: 90px;
+  justify-content: space-between;
+}
+.trending-products .trending-header .buttons button {
+  border: none;
+  background-color: rgb(87, 87, 87);
+  padding: 8px;
+  cursor: pointer;
+  transition: 0.2s ease-in;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.trending-products .trending-header .buttons button:hover {
+  background-color: black;
 }/*# sourceMappingURL=style.css.map */
