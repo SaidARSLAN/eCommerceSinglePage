@@ -83,9 +83,45 @@ html main, body main, #root main {
 .best-products {
   display: flex;
   flex-direction: column;
-  padding: 0 2rem;
+  padding: 8rem 2rem;
 }
 .best-products h1 {
   font-size: 24px;
+  font-family: Montserrat;
+  font-weight: 1000;
+}
+.best-products .product-list {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.best-products .product-list .product {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid rgb(199, 199, 199);
+  padding: 1rem;
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+}
+.best-products .product-list .product:hover {
+  border: 1px solid black;
+}
+.best-products .product-list .product .product-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+.best-products .product-list .product .product-image img {
+  width: 75%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.best-products .product-list .product p {
+  font-size: 18px;
   font-family: Montserrat;
 }/*# sourceMappingURL=style.css.map */
