@@ -127,6 +127,13 @@ html main, body main, #root main {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 100%;
+}
+.best-products .product-list .product .product-description h5 {
+  font-size: 16px;
+  height: 20px;
+  overflow: hidden;
+  font-family: Montserrat;
 }
 .best-products .product-list .product .product-description p {
   font-size: 15px;
