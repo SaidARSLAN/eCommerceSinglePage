@@ -2,17 +2,19 @@ import React, { useEffect, useReducer, useState } from 'react'
 import {BiRightArrow} from 'react-icons/bi';
 import {BiLeftArrow} from 'react-icons/bi'
 import {useSelector} from 'react-redux'
-
-
-
+import Product from '../components/Product';
 
 
 const TrendingProducts = () => {
 
     const products = useSelector((state) => state.products.products);
     const [step, setStep] = useState(0)
-    const [trends, setTrends] = useState(products.slice(step,step+2))
-    
+    const [trends, setTrends] = useState([])
+    useEffect(() => {
+        setTrends(products.slice(step,step+2));
+    },[step,products])
+
+
     const handleBack = () => {
         if (step > 0 ) {
             setStep((currStep) => currStep - 1)
@@ -20,13 +22,11 @@ const TrendingProducts = () => {
     }
 
     const handleNext = () => {
-        if (step < products.length - 1) {
+        if (step < products.length - 2) {
             setStep((currStep) => currStep + 1);
         }
     }
-    useEffect(() => {
-        setTrends(products.slice(step,step+2));
-    },[step])
+    
   return (
     <section className='trending-products'>
         <div className='trending-header'>
@@ -36,11 +36,11 @@ const TrendingProducts = () => {
                 <button onClick={handleNext}><BiRightArrow color='white' size={25}/></button>
             </div>
         </div>
-        <div className='trending-list'>
+        <motion className='trending-list'>
             {trends.map((trend) => {
-                return <p>{trend.title}</p>
+                return <Product product={trend}/>
             })}
-        </div>
+        </motion>
     </section>
   )
 }

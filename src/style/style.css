@@ -218,4 +218,83 @@ html main, body main, #root main {
 }
 .trending-products .trending-header .buttons button:hover {
   background-color: black;
+}
+.trending-products .trending-list {
+  display: grid;
+  grid-template-columns: auto auto;
+  margin-top: 1rem;
+  gap: 0px 1rem;
+  padding: 1rem 0rem;
+}
+.trending-products .trending-list .product {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 2px solid rgb(199, 199, 199);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+}
+.trending-products .trending-list .product:hover {
+  border: 2px solid black;
+}
+.trending-products .trending-list .product .product-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  height: 150px;
+  padding: 1rem;
+}
+.trending-products .trending-list .product .product-image img {
+  width: 50%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.trending-products .trending-list .product .product-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+.trending-products .trending-list .product .product-description h5 {
+  font-size: 16px;
+  overflow: hidden;
+  font-family: Montserrat;
+  margin-bottom: 0.7rem;
+}
+.trending-products .trending-list .product .product-description p {
+  font-size: 15px;
+  font-family: Montserrat;
+}
+
+.contact {
+  margin: 12rem 0rem;
+  background-color: rgb(35, 35, 35);
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.contact h1 {
+  color: white;
+  font-family: Montserrat;
+  font-size: 28px;
+}
+.contact input {
+  width: 250px;
+  margin-top: 1rem;
+  font-size: 15px;
+  padding: 8px 6px;
+  font-family: Montserrat;
+}
+.contact button {
+  font-size: 18px;
+  padding: 6px 8px;
+  margin-left: 1rem;
+  border: none;
+  font-family: Montserrat;
+  font-weight: 1000;
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */

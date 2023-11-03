@@ -32,6 +32,54 @@
             }
         }
     }
+    .trending-list {
+        display: grid;
+        grid-template-columns: auto auto;
+        margin-top: 1rem;
+        gap: 0px 1rem;
+        padding: 1rem 0rem;
+        .product {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border: 2px solid rgb(199, 199, 199);
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            transition: 0.4s ease-in-out;
+            &:hover {
+                border: 2px solid black;
+            }
+            .product-image {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 1rem;
+                height: 150px;
+                padding: 1rem;
+                img {
+                    width: 50%;
+                    object-fit:contain;
+                }
+            }
+            .product-description {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 100%;
+                h5 {
+                    font-size: 16px;
+                    overflow: hidden;
+                    font-family: Montserrat;
+                    margin-bottom: 0.7rem;
+                }
+                p {
+                    font-size: 15px;
+                    font-family: Montserrat;
+                }
+            }
+
+        }
+    }
     
     
 }

@@ -1,5 +1,6 @@
 import Nav from "./components/Nav"
 import BestProducts from "./sections/BestProducts"
+import Contact from "./sections/Contact"
 import Hero from "./sections/Hero"
 import SendShopPage from "./sections/SendShopPage"
 import TrendingProducts from "./sections/TrendingProducts"
@@ -15,6 +16,7 @@ function App() {
       <BestProducts />
       <SendShopPage />
       <TrendingProducts />
+      <Contact />
     </main>
   )
 }
