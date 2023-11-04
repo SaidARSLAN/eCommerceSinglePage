@@ -1,34 +1,81 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-
 .hero-page {
-    display: inline-grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto auto;
-    padding: 1rem 2rem;
-    gap: 12px;
-    .hero-image {
-        width: 100%;
-        height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 1rem 12rem;
+    .first-section {
+        width: 75%;
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        justify-content: center;
+    }
+    .hero-first {
+        width: 550px;
+        height: 500px;
         position: relative;
-        cursor: pointer;
         img {
             width: 100%;
-            height: 300px;
+            height: 100%;
             filter: brightness(40%);
-            transition: 0.4s ease-in-out;
+            transition: 0.4s ease-in;
             &:hover {
-                filter: brightness(70%);
+                filter: brightness(60%);
             }
         }
         h1 {
             position: absolute;
-            bottom: 10px;
-            padding: 12px;
+            bottom: 1rem;
+            left: 1rem;
             color: white;
-            font-size: 24px;
-            font-weight: 1000;
-            letter-spacing: 1px;
             font-family: Montserrat;
+            font-size: 28px;
+            letter-spacing: 1px;
+            font-weight: 1000;
+        }
+    }
+    .hero-second {
+        width: 300px;
+        height: 500px;
+        position: relative;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+        h1 {
+            position: absolute;
+            bottom: 1px;
+        }
+    }
+    .second-section {
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+    }
+    .hero-third {
+        width: 300px;
+        height: 250px;
+        position: relative;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+        h1 {
+            position: absolute;
+            bottom: 1px;
+        }
+    }
+    .hero-four {
+        width: 300px;
+        height: 250px;
+        position: relative;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+        h1 {
+            position: absolute;
+            bottom: 1px;
         }
     }
 }

@@ -6,6 +6,9 @@
     align-items: center;
     justify-content: space-between;
     box-shadow: 0.5px 0.4px 0.1px rgb(179, 179, 179);
+    @media only screen and (min-width:600px) {
+        padding: 0px 12rem;
+    }
     .navbar-logo {
         display: flex;
         align-items: center;
@@ -20,12 +23,38 @@
         width: calc(100% - 80%);
         align-items: center;
         justify-content: space-between;
+        @media only screen and (min-width:600px) {
+            width: 30%;
+        }
         .navbar-shopping {
             cursor: pointer;
             
         }
         .navbar-hamburger {
             cursor: pointer;
+            @media only screen and (min-width:600px) {
+                display: none;
+            }
+        }
+        .nav-menu {
+            display: none;
+            @media only screen and (min-width:600px) {
+                display: flex;
+                align-items: center;
+                width: 100%;
+                justify-content: space-evenly;
+            }
+            a {
+                text-decoration: none;
+                font-size: 18px;
+                font-family: Montserrat;
+                white-space: nowrap;
+                color: black;
+                cursor: pointer;
+                &:hover {
+                    border-bottom: 1px solid black;
+                }
+            }
         }
     }
 }

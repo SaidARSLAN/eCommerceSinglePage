@@ -12,12 +12,17 @@ const Nav = () => {
             <img src={logo} />
         </div>
         <div className='navbar-menu'>
+        <div className='nav-menu'>
+            <a href='/'>Categories</a>
+            <a href='/'>Product Page</a>
+        </div>
         <div className='navbar-shopping'>
                 <AiOutlineShoppingCart size={25}/>
         </div>
         <div className='navbar-hamburger'>
             <AiOutlineMenu size={25}/>
         </div>
+        
         </div>
     </nav>
   )
