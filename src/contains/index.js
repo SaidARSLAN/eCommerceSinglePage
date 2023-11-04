@@ -3,4 +3,5 @@ import skincare from '../assets/skincare.jpg';
 import kitchen from '../assets/kitchen.jpg';
 import electronics from '../assets/electronics.jpg';
 import logo from '../assets/logo.png'
-export {furniture,skincare,kitchen,electronics,logo};
+import sendshop from '../assets/sendshop.jpg'
+export {furniture,skincare,kitchen,electronics,logo,sendshop};

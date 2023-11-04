@@ -134,11 +134,11 @@ html main, body main, #root main {
 .hero-page .hero-first img {
   width: 100%;
   height: 100%;
-  filter: brightness(40%);
+  filter: brightness(60%);
   transition: 0.4s ease-in;
 }
 .hero-page .hero-first img:hover {
-  filter: brightness(60%);
+  filter: brightness(80%);
 }
 .hero-page .hero-first h1 {
   position: absolute;
@@ -159,11 +159,11 @@ html main, body main, #root main {
 .hero-page .hero-second img {
   width: 100%;
   height: 100%;
-  filter: brightness(40%);
+  filter: brightness(60%);
   transition: 0.4s ease-in;
 }
 .hero-page .hero-second img:hover {
-  filter: brightness(60%);
+  filter: brightness(80%);
 }
 .hero-page .hero-second h1 {
   position: absolute;
@@ -211,11 +211,11 @@ html main, body main, #root main {
 .hero-page .hero-third img {
   width: 100%;
   height: 100%;
-  filter: brightness(40%);
+  filter: brightness(60%);
   transition: 0.4s ease-in;
 }
 .hero-page .hero-third img:hover {
-  filter: brightness(60%);
+  filter: brightness(80%);
 }
 .hero-page .hero-third h1 {
   position: absolute;
@@ -236,11 +236,11 @@ html main, body main, #root main {
 .hero-page .hero-four img {
   width: 100%;
   height: 100%;
-  filter: brightness(40%);
+  filter: brightness(60%);
   transition: 0.4s ease-in;
 }
 .hero-page .hero-four img:hover {
-  filter: brightness(60%);
+  filter: brightness(80%);
 }
 .hero-page .hero-four h1 {
   position: absolute;
@@ -338,47 +338,19 @@ html main, body main, #root main {
 }
 
 .send-shop {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 0 2rem;
-  background-color: rgb(225, 225, 225);
-  max-width: 100%;
-  height: 50%;
-  padding: 0 3rem;
-}
-.send-shop h1 {
-  font-size: 1.5rem;
-  font-family: Montserrat;
-  margin-bottom: 1rem;
-  font-weight: 1000;
-}
-.send-shop p {
-  font-size: 1rem;
-  font-family: Montserrat;
-  margin-bottom: 1rem;
-}
-.send-shop button {
-  width: 8rem;
-  white-space: nowrap;
-  font-size: 1rem;
-  padding: 12px 12px;
-  text-transform: uppercase;
-  border: none;
-  background-color: black;
-  color: white;
-  font-family: Montserrat;
-  font-weight: 1000;
-  border: 2px solid black;
-  cursor: pointer;
-  transition: 0.2s ease-in;
+  background-color: #d6d6d6;
+  width: calc(100% - 22rem);
+  margin-left: 12rem;
   display: flex;
   align-items: center;
-  justify-content: center;
+  height: 400px;
 }
-.send-shop button:hover {
-  background-color: white;
-  color: black;
+.send-shop .send-shop-image {
+  height: 400px;
+}
+.send-shop .send-shop-image img {
+  height: 400px;
+  width: 600px;
 }
 
 .trending-products {
