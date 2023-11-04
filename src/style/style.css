@@ -90,12 +90,40 @@ html main, body main, #root main {
   padding: 1rem 12rem;
   gap: 1rem;
 }
+@media only screen and (max-width: 600px) {
+  .hero-page {
+    display: grid;
+    padding: 1rem;
+  }
+}
 .hero-page .first-section {
   width: 75%;
   display: flex;
   gap: 1rem;
   align-items: center;
   justify-content: center;
+}
+@media only screen and (max-width: 800px) {
+  .hero-page .first-section {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 0.2rem;
+  }
+  .hero-page .first-section .hero-first {
+    width: 220px;
+    height: 220px;
+  }
+  .hero-page .first-section .hero-first h1 {
+    font-size: 24px;
+  }
+  .hero-page .first-section .hero-second {
+    width: 220px;
+    height: 220px;
+  }
+  .hero-page .first-section .hero-second h1 {
+    font-size: 24px;
+  }
 }
 .hero-page .hero-first {
   width: 550px;
@@ -152,6 +180,27 @@ html main, body main, #root main {
   display: flex;
   flex-direction: column;
   row-gap: 1rem;
+}
+@media only screen and (max-width: 800px) {
+  .hero-page .second-section {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+  .hero-page .second-section .hero-third {
+    width: 220px;
+    height: 220px;
+  }
+  .hero-page .second-section .hero-third h1 {
+    font-size: 24px;
+  }
+  .hero-page .second-section .hero-four {
+    width: 220px;
+    height: 220px;
+  }
+  .hero-page .second-section .hero-four h1 {
+    font-size: 24px;
+  }
 }
 .hero-page .hero-third {
   width: 292px;
