@@ -2,6 +2,7 @@ import React, { useEffect, useReducer, useState } from 'react'
 import {BiRightArrow} from 'react-icons/bi';
 import {BiLeftArrow} from 'react-icons/bi'
 import {useSelector} from 'react-redux'
+import Product from '../components/Product';
 
 
 
@@ -49,10 +50,7 @@ const TrendingProducts = () => {
         </div>
         <div className='trending-body'>
           {firstProducts.map((product) => {
-            return <div>
-              <img src={product.image} />
-              <p>{product.title}</p>
-              </div>
+            return <Product product={product} />
           })}
         </div>
     </section>

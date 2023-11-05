@@ -38,8 +38,58 @@
         margin-top: 1rem;
         display: grid;
         grid-template-columns: auto auto auto auto auto;
-        img {
-            width: 50%;
+        column-gap: 0.4rem;
+        .product {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border: 2px solid rgb(199, 199, 199);
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            transition: 0.4s ease-in-out;
+            width: 205px;
+            &:hover {
+                border: 2px solid black;
+            }
+            @media only screen and (min-width:600px) {
+                width: 220px;
+                height: 320px; 
+            }
+            .product-image {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 1rem;
+                height: 200px;
+                padding: 1rem;
+                
+                img {
+                    width: 90%;
+                    height: 100%;
+                    object-fit:contain;
+                }
+            }
+            .product-description {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 100%;
+                @media only screen and (min-width:600px) {
+                    height: 100%;
+                    justify-content: flex-end;
+                }
+                h5 {
+                    font-size: 16px;
+                    overflow: hidden;
+                    font-family: Montserrat;
+                    margin-bottom: 0.7rem;
+                }
+                p {
+                    font-size: 15px;
+                    font-family: Montserrat;
+                }
+            }
+
         }
     }   
 }
