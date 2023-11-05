@@ -1,4 +1,5 @@
 import Nav from "./components/Nav"
+import SideBar from "./components/SideBar"
 import BestProducts from "./sections/BestProducts"
 import Contact from "./sections/Contact"
 import Footer from "./sections/Footer"
@@ -12,6 +13,7 @@ function App() {
 
   return (
     <main>
+      <SideBar />
       <Nav />
       <Hero />
       <BestProducts />

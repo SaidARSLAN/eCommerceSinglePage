@@ -8,7 +8,7 @@ const cutProductTitle = (title) => {
 
 const Product = ({product}) => {
   return (
-    <motion.div className='product' initial={{x:100}} animate={{x:0}}>
+    <motion.div className='product' initial={{x:1000}} animate={{x:0}}>
         <div className='product-image'>
         <img src={product.image} />
         </div>

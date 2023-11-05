@@ -4,7 +4,12 @@ import { logo } from '../contains'
 const Nav = () => {
 
 
-
+  const handleShop = () => {
+    const overlay = document.querySelector("#overlay");
+    const card = document.querySelector("#overlay-card");
+    overlay.classList.add("open-overlay");
+    card.classList.add("open");
+  }
 
   return (
     <nav className='navbar'>
@@ -16,7 +21,7 @@ const Nav = () => {
             <a href='/'>Categories</a>
             <a href='/'>Product Page</a>
         </div>
-        <div className='navbar-shopping'>
+        <div className='navbar-shopping' onClick={handleShop}>
                 <AiOutlineShoppingCart size={25}/>
         </div>
         <div className='navbar-hamburger'>
