@@ -8,7 +8,7 @@ import Product from '../components/Product';
 
 const TrendingProducts = () => {
 
-  const products = useSelector((state) => state.products.products)
+  const products = useSelector((state) => state.products.products).slice(0,8)
   const [step, setStep] = useState(0);
   const [firstProducts, setFirstProducts] = useState([]);
   const [currentWidth, setCurrentWidth] = useState(window.innerWidth);

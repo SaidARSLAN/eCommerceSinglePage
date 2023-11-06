@@ -1,25 +1,24 @@
 import Nav from "./components/Nav"
 import SideBar from "./components/SideBar"
-import BestProducts from "./sections/BestProducts"
+import Categories from "./pages/Categories"
+import MainPage from "./pages/MainPage"
 import Contact from "./sections/Contact"
 import Footer from "./sections/Footer"
-import Hero from "./sections/Hero"
-import SendShopPage from "./sections/SendShopPage"
-import TrendingProducts from "./sections/TrendingProducts"
 import './style/style.css'
-
-
+import {Route,Routes} from 'react-router-dom'
 function App() {
 
   return (
     <main>
       <SideBar />
       <Nav />
-      <Hero />
-      <BestProducts />
-      <SendShopPage />
-      <TrendingProducts />
-      <Contact />
+      
+     
+    <Routes>
+      <Route path='/' element={<MainPage />}></Route>
+      <Route path="/categories" element={<Categories />}></Route>
+    </Routes>
+    <Contact />
       <Footer />
     </main>
   )

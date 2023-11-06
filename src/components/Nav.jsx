@@ -1,6 +1,7 @@
 import React from 'react'
 import {AiOutlineMenu,AiOutlineShoppingCart} from 'react-icons/ai'
 import { logo } from '../contains'
+import { NavLink } from 'react-router-dom'
 const Nav = () => {
 
 
@@ -13,13 +14,13 @@ const Nav = () => {
 
   return (
     <nav className='navbar'>
-        <div className='navbar-logo'>
+        <NavLink className='navbar-logo' to='/'>
             <img src={logo} />
-        </div>
+        </NavLink>
         <div className='navbar-menu'>
         <div className='nav-menu'>
-            <a href='/'>Categories</a>
-            <a href='/'>Product Page</a>
+            <NavLink to='/categories'>Categories</NavLink>
+            <NavLink href='/'>Product Page</NavLink>
         </div>
         <div className='navbar-shopping' onClick={handleShop}>
                 <AiOutlineShoppingCart size={25}/>

@@ -9,14 +9,13 @@ const BestProducts = () => {
 
    useEffect(() => {
         dispatch(fetchProducts());
-        console.log(products);
    },[]);
 
   return (
     <section className='best-products'>
         <h1>Products we are proud of</h1>
         <div className='product-list'>
-        {products.map((product,index) => {
+        {products.slice(8,16).map((product,index) => {
             return <Product product={product}/>
         })}
         </div>
