@@ -18,10 +18,13 @@ const ProductDetail = () => {
     },[products,url])
 
   return (
-    <div>
+      <div className='product-detail'>
         <img src={product && product.image} />
-        <p>{product && product.title}</p>
+        <h1>{product && product.title.split(" ").slice(0,4).join(" ")}</h1>
+        <div className='product-buy'>
+        <p>{product && product.description}</p>
         <p>{product && product.price}</p>
+        </div>
     </div>
   )
 }
