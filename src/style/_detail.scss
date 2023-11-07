@@ -17,4 +17,23 @@
         justify-content: center;
         font-family: Montserrat;
     }
+    .product-price {
+        margin-top: 2rem;
+        width: 100%;
+        display:flex;
+        justify-content: space-between;
+        .buttons {
+            display: flex;
+            gap: 1rem;
+            button {
+                width: 3rem;
+                height: 2rem;
+                font-size: 2rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+            }
+        }
+    }
 }

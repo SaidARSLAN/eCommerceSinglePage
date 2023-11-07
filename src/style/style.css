@@ -698,4 +698,23 @@ html main, body main, #root main {
   align-items: center;
   justify-content: center;
   font-family: Montserrat;
+}
+.product-detail .product-price {
+  margin-top: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.product-detail .product-price .buttons {
+  display: flex;
+  gap: 1rem;
+}
+.product-detail .product-price .buttons button {
+  width: 3rem;
+  height: 2rem;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */
