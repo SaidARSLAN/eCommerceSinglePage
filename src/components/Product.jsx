@@ -16,7 +16,7 @@ const Product = ({product}) => {
 
 
   return (
-    <motion.div className='product' initial={{x:1000}} animate={{x:0}} onClick={handleClick}>
+    <div className='product' onClick={handleClick}>
         <div className='product-image'>
         <img src={product.image} />
         </div>
@@ -24,7 +24,7 @@ const Product = ({product}) => {
         <h5>{cutProductTitle(product.title)}</h5>
         <p><strong>{product.price} $</strong></p>
         </div>
-    </motion.div>
+    </div>
   )
 }
 

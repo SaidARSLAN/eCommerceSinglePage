@@ -41,6 +41,9 @@ const ProductDetail = () => {
           </div>
         <p>{product && (quantity* product.price).toString().slice(0,5)} $</p>
         </div>
+        <div className='buy-section'>
+        <button>Add</button>
+        </div>
         </div>
     </div>
   )

@@ -16,6 +16,30 @@
         align-items: center;
         justify-content: center;
         font-family: Montserrat;
+        width: 100%;
+        .buy-section {
+            margin-top: 1rem;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            button {
+                width: 4rem;
+                height: 2rem;
+                font-size: 1rem;
+                font-family: Montserrat;
+                font-weight: 1000;
+                letter-spacing: 1px;
+                color: white;
+                background-color: rgb(109, 42, 42);
+                border: none;
+                cursor: pointer;
+                transition: 0.4s ease;
+                &:hover {
+                    background-color: red;
+                }
+            }
+        }
     }
     .product-price {
         margin-top: 2rem;

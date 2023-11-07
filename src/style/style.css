@@ -698,6 +698,30 @@ html main, body main, #root main {
   align-items: center;
   justify-content: center;
   font-family: Montserrat;
+  width: 100%;
+}
+.product-detail .product-buy .buy-section {
+  margin-top: 1rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.product-detail .product-buy .buy-section button {
+  width: 4rem;
+  height: 2rem;
+  font-size: 1rem;
+  font-family: Montserrat;
+  font-weight: 1000;
+  letter-spacing: 1px;
+  color: white;
+  background-color: rgb(109, 42, 42);
+  border: none;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+.product-detail .product-buy .buy-section button:hover {
+  background-color: red;
 }
 .product-detail .product-price {
   margin-top: 2rem;
