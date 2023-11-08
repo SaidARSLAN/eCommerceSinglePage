@@ -621,8 +621,17 @@ html main, body main, #root main {
   font-size: 1.4rem;
   font-family: Montserrat;
 }
-.overlay .side-card .header h1 {
-  font-family: Montserrat;
+.overlay .side-card .header button {
+  border: none;
+  background-color: transparent;
+  font-size: 1.4rem;
+  font-weight: 1000;
+  cursor: pointer;
+  color: #727272;
+  transition: 0.4s ease-in;
+}
+.overlay .side-card .header button:hover {
+  color: black;
 }
 .overlay .side-card .body {
   display: flex;

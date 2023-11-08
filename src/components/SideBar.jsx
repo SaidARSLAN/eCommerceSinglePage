@@ -18,7 +18,7 @@ const SideBar = () => {
       <div className='side-card' id='overlay-card'>
         <div className='header'>
           <h1>Your Shopping Card (0)</h1>
-          <h3>X</h3>
+          <button onClick={handleClick}>X</button>
         </div>
         <div className='body'>
           <h3>Your cart is emtpy</h3>
