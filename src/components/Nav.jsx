@@ -7,9 +7,7 @@ const Nav = () => {
 
   const handleShop = () => {
     const overlay = document.querySelector("#overlay");
-    const card = document.querySelector("#overlay-card");
-    overlay.classList.add("open-overlay");
-    card.classList.add("open");
+    overlay.classList.add("open");
   }
 
   return (
