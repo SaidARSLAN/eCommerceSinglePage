@@ -835,4 +835,26 @@ html main, body main, #root main {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+}
+.product-detail .modal {
+  width: 24rem;
+  position: absolute;
+  right: 35rem;
+  background-color: rgb(235, 235, 235);
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease;
+}
+.product-detail .modal p {
+  text-align: center;
+  font-size: 1.3rem;
+  font-family: Montserrat;
+  cursor: pointer;
+  width: 100%;
+  border-bottom: 4px solid green;
+}
+.product-detail .modal:hover {
+  background-color: white;
 }/*# sourceMappingURL=style.css.map */

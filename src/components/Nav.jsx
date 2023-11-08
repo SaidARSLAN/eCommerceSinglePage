@@ -2,6 +2,7 @@ import React from 'react'
 import {AiOutlineMenu,AiOutlineShoppingCart} from 'react-icons/ai'
 import { logo } from '../contains'
 import { NavLink } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 const Nav = () => {
 
 
@@ -9,7 +10,7 @@ const Nav = () => {
     const overlay = document.querySelector("#overlay");
     overlay.classList.add("open");
   }
-
+  const shops = useSelector(state => state.shop.shops)
   return (
     <nav className='navbar'>
         <NavLink className='navbar-logo' to='/'>

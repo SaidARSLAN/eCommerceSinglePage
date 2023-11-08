@@ -60,4 +60,26 @@
             }
         }
     }
+    .modal {
+        width: 24rem;
+        position: absolute;
+        right: 35rem;
+        background-color: rgb(235, 235, 235);
+        border: 1px solid black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.3s ease;
+        p {
+            text-align: center;
+            font-size: 1.3rem;
+            font-family: Montserrat;
+            cursor: pointer;
+            width: 100%;
+            border-bottom: 4px solid green;
+        }
+        &:hover {
+            background-color: white;
+        }
+    }
 }
