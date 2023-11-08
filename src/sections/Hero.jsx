@@ -1,6 +1,8 @@
 import React from 'react'
 import { furniture,kitchen,electronics,skincare } from '../contains'
 const Hero = () => {
+
+
   return (
     <section className='hero-page'>
       <div className='first-section'>

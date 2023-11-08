@@ -2,8 +2,10 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import products, { fetchProducts } from '../store/products';
 import { useDispatch, useSelector } from 'react-redux';
+import { ADD_ITEM } from '../store/shop';
 
 const ProductDetail = () => {
+  const [control, setControl] = useState(false)
   const [quantity, setQuantity] = useState(0);
     const [product, setProduct] = useState("")
     const products = useSelector(state => state.products.products);
@@ -15,7 +17,6 @@ const ProductDetail = () => {
     useEffect(() => {
         const productDetect = products.find((product) => product.id === parseInt(url,10))
         setProduct(productDetect);
-        console.log(product)
     },[products,url])
 
     const handleDecrease = () => {
@@ -26,7 +27,15 @@ const ProductDetail = () => {
     const handleIncrease = () => {
       setQuantity((currQuantity) => currQuantity + 1)
     }
-
+    const handleBuy  = () => {
+      setControl(true)
+      dispatch(ADD_ITEM({
+        image: product.image,
+        title:product.title,
+        quantity : quantity,
+        price : quantity * product.price
+      }))
+    }
   return (
       <div className='product-detail'>
         <img src={product && product.image} />
@@ -42,7 +51,7 @@ const ProductDetail = () => {
         <p>{product && (quantity* product.price).toString().slice(0,5)} $</p>
         </div>
         <div className='buy-section'>
-        <button>Add</button>
+        <button onClick={handleBuy} disabled={control}>{control ? "Added" :  "Add"}</button>
         </div>
         </div>
     </div>
