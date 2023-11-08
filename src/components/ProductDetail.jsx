@@ -28,13 +28,15 @@ const ProductDetail = () => {
       setQuantity((currQuantity) => currQuantity + 1)
     }
     const handleBuy  = () => {
+      const overlay = document.querySelector("#overlay");
       setControl(true)
       dispatch(ADD_ITEM({
         image: product.image,
         title:product.title,
         quantity : quantity,
-        price : quantity * product.price
+        price : product.price
       }))
+      overlay.classList.add("open");
     }
   return (
       <div className='product-detail'>
@@ -42,7 +44,7 @@ const ProductDetail = () => {
         <h1>{product && product.title.split(" ").slice(0,4).join(" ")}</h1>
         <div className='product-buy'>
         <p>{product && product.description}</p>
-        <div className='product-price'>
+        <div className='product-price' style={control ? {display:"none"} : {}}>
           <p>Quantity : {quantity}</p>
           <div className='buttons'>
             <button onClick={handleDecrease}>-</button>

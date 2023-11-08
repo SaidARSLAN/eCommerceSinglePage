@@ -597,6 +597,7 @@ html main, body main, #root main {
   opacity: 0;
 }
 .overlay .side-card {
+  overflow: auto;
   padding: 3rem 0rem 0rem 0rem;
   position: absolute;
   top: 0;
@@ -650,7 +651,15 @@ html main, body main, #root main {
   font-weight: 1000;
   cursor: pointer;
 }
-.overlay .side-card .shop-card {
+.overlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+.overlay.open .side-card {
+  right: 0;
+}
+
+.shop-card {
   display: flex;
   width: 100%;
   height: 100%;
@@ -660,30 +669,23 @@ html main, body main, #root main {
   -moz-column-gap: 2rem;
        column-gap: 2rem;
 }
-.overlay .side-card .shop-card img {
+.shop-card img {
   width: 20%;
 }
-.overlay .side-card .shop-card h1 {
+.shop-card h1 {
   font-size: 1.4rem;
 }
-.overlay .side-card .shop-card .buttons {
+.shop-card .buttons {
   display: flex;
   flex-direction: column;
   row-gap: 0.7rem;
 }
-.overlay .side-card .shop-card .buttons button {
+.shop-card .buttons button {
   width: 2rem;
   font-size: 2rem;
   font-family: Montserrat;
   cursor: pointer;
   font-weight: 1000;
-}
-.overlay.open {
-  opacity: 1;
-  pointer-events: auto;
-}
-.overlay.open .side-card {
-  right: 0;
 }
 
 .categories {
