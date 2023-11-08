@@ -31,10 +31,14 @@ const shops = createSlice({
                 }
             })
             state.total = state.shops.reduce((state,currValue) => { return state+(currValue.price * currValue.quantity)},0)
+        },
+        COMPLETE_ORDER : (state,action) => {
+            state.shops = [];
+            state.total = 0;
         }
     }
 })
 
-export const {INCREASE_ITEM,ADD_ITEM,DECREASE_ITEM} = shops.actions;
+export const {INCREASE_ITEM,ADD_ITEM,DECREASE_ITEM,COMPLETE_ORDER} = shops.actions;
 
 export default shops.reducer;

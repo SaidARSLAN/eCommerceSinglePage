@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { ShopCard } from './ShopCard';
+import { COMPLETE_ORDER } from '../store/shop';
 const SideBar = () => {
+  const dispatch = useDispatch();
   window.addEventListener("click", (event) => {
     const overlay = document.querySelector("#overlay");
   
@@ -14,6 +16,9 @@ const SideBar = () => {
   const handleClick = () => {                  
     const overlay = document.querySelector("#overlay");
     overlay.classList.remove("open")
+  }
+  const handleComplete = () => {
+    dispatch(COMPLETE_ORDER());
   }
   return (
     <div className='overlay' id='overlay' >
@@ -28,8 +33,8 @@ const SideBar = () => {
           <h3>Your cart is emtpy</h3>
           <button onClick={handleClick}>Keep Browsing</button>
         </div> }
-        
       </div>
+      <div className='complete-order' onClick={handleComplete}>{shops.length > 0 ? <button>Complete Order</button> : <></>}</div>
 
     </div>
   )

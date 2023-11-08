@@ -34,7 +34,7 @@ const ProductDetail = () => {
         image: product.image,
         title:product.title,
         quantity : quantity,
-        price : product.price
+        price : product.price,
       }))
       overlay.classList.add("open");
     }

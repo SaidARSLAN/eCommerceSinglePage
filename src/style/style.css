@@ -596,6 +596,25 @@ html main, body main, #root main {
   pointer-events: none;
   opacity: 0;
 }
+.overlay .complete-order {
+  position: absolute;
+  right: 3rem;
+  bottom: 1rem;
+  z-index: 10001;
+}
+.overlay .complete-order button {
+  width: 24rem;
+  height: 3rem;
+  font-size: 2rem;
+  border: none;
+  background-color: rgb(148, 48, 48);
+  color: white;
+  transition: 0.4 ease-in;
+  cursor: pointer;
+}
+.overlay .complete-order button:hover {
+  background-color: red;
+}
 .overlay .side-card {
   overflow: auto;
   padding: 3rem 0rem 0rem 0rem;
